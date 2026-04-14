@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">inf04_22</string>
+    <string name="rejestruj_konto">Rejestruj konto</string>
+    <string name="podaj_e_mail">Podaj e-mail:</string>
+    <string name="email">email</string>
+    <string name="podaj_has_o">Podaj hasło:</string>
+    <string name="powt_rz_has_o">Powtórz hasło:</string>
+    <string name="zatwierdz">ZATWIERDŹ</string>
+    <string name="to_nie_jest_email">Nieprawidłowy adres e-mail</string>
+    <string name="hasla_sie_nie_zgadzaja">Hasła się różnią</string>
+</resources>
