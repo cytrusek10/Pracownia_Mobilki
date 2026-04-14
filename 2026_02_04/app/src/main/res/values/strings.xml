@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">2026_02_04</string>
+    <string name="email">email</string>
+    <string name="imie">Imię</string>
+    <string name="nazwisko">Nazwisko</string>
+    <string name="zaloguj_sie">Zaloguj się</string>
+    <string name="adres_email">Adres email</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
