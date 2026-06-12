@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Zadanie 1.04</string>
+    <string name="btn1">Przycisk 1 – Powiadomienie wysokiego priorytetu</string>
+    <string name="btn2">Przycisk 2 – Powiadomienie niskiego priorytetu</string>
+    <string name="btn3">Przycisk 3 – Wróć do Aktywności 1</string>
+    <string name="btn4">Przycisk 4 – Wróć do Aktywności 1</string>
+    <string name="channel_high">Wysoki priorytet</string>
+    <string name="channel_low">Niski priorytet</string>
+    <string name="notif_high_title">Powiadomienie ważne!</string>
+    <string name="notif_high_text">Kliknij, aby przejść do Aktywności 2</string>
+    <string name="notif_low_title">Powiadomienie informacyjne</string>
+    <string name="notif_low_text">Kliknij, aby przejść do Aktywności 3</string>
+</resources>
