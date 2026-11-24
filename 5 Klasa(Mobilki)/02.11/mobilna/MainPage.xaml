@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Vet.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout BackgroundColor="#90EE90" Spacing="4">
+
+            <Label Text="Wizyta u weterynarza" FontSize="28"
+                   BackgroundColor="#2E8B57" Padding="10" />
+
+            <Entry x:Name="OwnerEntry" Placeholder="Imię i nazwisko właściciela..." />
+
+            <Label Text="Gatunek" Margin="5,0" />
+            <ListView x:Name="SpeciesListView" ItemTapped="OnSpeciesTapped"
+                      RowHeight="40" HeightRequest="120" />
+
+            <HorizontalStackLayout Margin="5,10">
+                <Label Text="Ile ma lat?" VerticalOptions="Center" />
+                <Label x:Name="AgeLabel" Text="0" VerticalOptions="Center" Margin="5,0" />
+                <Slider x:Name="AgeSlider" Minimum="0" Maximum="20" Value="0"
+                        WidthRequest="220" ValueChanged="OnAgeChanged" />
+            </HorizontalStackLayout>
+
+            <Entry x:Name="PurposeEntry" Placeholder="Cel wizyty" />
+
+            <TimePicker x:Name="VisitTimePicker" Time="16:00:00" />
+
+            <Button Text="OK" Clicked="OnConfirmClicked" HorizontalOptions="Start" Margin="5" />
+
+            <Label x:Name="SummaryLabel" Margin="5" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

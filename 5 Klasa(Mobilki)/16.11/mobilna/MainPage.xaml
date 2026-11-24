@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ColorPicker.MainPage"
+             Title="Wzornik kolorów RGB. Wykonał 00000000000"
+             BackgroundColor="#FFF8DC">
+
+    <VerticalStackLayout Padding="15" Spacing="10">
+
+        <BoxView x:Name="PreviewBox" Color="White" HeightRequest="80" />
+
+        <Label Text="Dobierz kolor suwakami i zapisz przyciskiem:" TextColor="Black" />
+
+        <Grid ColumnDefinitions="30,*,40" RowDefinitions="50,50,50">
+            <Label Grid.Row="0" Grid.Column="0" Text="R" TextColor="Black" VerticalOptions="Center" />
+            <Slider x:Name="RedSlider" Grid.Row="0" Grid.Column="1"
+                    Minimum="0" Maximum="255" Value="255" ValueChanged="OnSliderChanged" />
+            <Label x:Name="RedValueLabel" Grid.Row="0" Grid.Column="2" Text="255" TextColor="Black" VerticalOptions="Center" />
+
+            <Label Grid.Row="1" Grid.Column="0" Text="G" TextColor="Black" VerticalOptions="Center" />
+            <Slider x:Name="GreenSlider" Grid.Row="1" Grid.Column="1"
+                    Minimum="0" Maximum="255" Value="255" ValueChanged="OnSliderChanged" />
+            <Label x:Name="GreenValueLabel" Grid.Row="1" Grid.Column="2" Text="255" TextColor="Black" VerticalOptions="Center" />
+
+            <Label Grid.Row="2" Grid.Column="0" Text="B" TextColor="Black" VerticalOptions="Center" />
+            <Slider x:Name="BlueSlider" Grid.Row="2" Grid.Column="1"
+                    Minimum="0" Maximum="255" Value="255" ValueChanged="OnSliderChanged" />
+            <Label x:Name="BlueValueLabel" Grid.Row="2" Grid.Column="2" Text="255" TextColor="Black" VerticalOptions="Center" />
+        </Grid>
+
+        <Button Text="Pobierz" Clicked="OnPickClicked" BackgroundColor="#CD853F" TextColor="Black" HorizontalOptions="Center" WidthRequest="200" />
+
+        <Label x:Name="PickedColorLabel" Text="255, 255, 255" BackgroundColor="White" TextColor="Black"
+               Padding="5" HorizontalOptions="Center" WidthRequest="200" />
+    </VerticalStackLayout>
+</ContentPage>

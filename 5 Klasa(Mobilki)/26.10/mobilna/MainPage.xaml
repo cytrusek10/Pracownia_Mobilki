@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="mobile.MainPage"
+             Title="Nadaj Przesyłkę, PESEL: 00000000000">
+
+    <ScrollView>
+        <!-- Jedna kolumna: lewa kolumna z wersji desktopowej (rodzaj przesyłki, cena)
+             jest na górze, prawa kolumna (dane adresowe) znajduje się pod nią -->
+        <VerticalStackLayout Padding="15" Spacing="12">
+
+            <!-- Lewa kolumna -->
+            <Border Stroke="Gray" StrokeThickness="1" Padding="10">
+                <VerticalStackLayout>
+                    <Label Text="Rodzaj przesyłki" FontAttributes="Bold" />
+                    <RadioButton x:Name="PostcardRadio" Content="Pocztówka" GroupName="ShipmentType" IsChecked="True" />
+                    <RadioButton x:Name="LetterRadio" Content="List" GroupName="ShipmentType" />
+                    <RadioButton x:Name="ParcelRadio" Content="Paczka" GroupName="ShipmentType" />
+                </VerticalStackLayout>
+            </Border>
+
+            <Button Text="Sprawdź Cenę" Clicked="OnCheckPriceClicked" HorizontalOptions="Fill" />
+
+            <HorizontalStackLayout Spacing="20">
+                <Image x:Name="ShipmentImage" Source="pocztowka.png" WidthRequest="100" HeightRequest="80" />
+                <Label x:Name="PriceLabel" Text="Cena: " FontSize="24" FontAttributes="Bold" VerticalOptions="Center" />
+            </HorizontalStackLayout>
+
+            <!-- Prawa kolumna, teraz pod lewą -->
+            <Border Stroke="Gray" StrokeThickness="1" Padding="10">
+                <VerticalStackLayout>
+                    <Label Text="Dane adresowe" FontAttributes="Bold" />
+                    <Label Text="Ulica z numerem" />
+                    <Entry x:Name="StreetEntry" />
+                    <Label Text="Kod pocztowy" />
+                    <Entry x:Name="PostalCodeEntry" Keyboard="Numeric" />
+                    <Label Text="Miasto" />
+                    <Entry x:Name="CityEntry" />
+                </VerticalStackLayout>
+            </Border>
+
+            <Button Text="Zatwierdź" Clicked="OnConfirmClicked" HorizontalOptions="Fill" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

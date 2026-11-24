@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mobilna.MainPage"
+             BackgroundColor="#F5F5DC">
+    <VerticalStackLayout BackgroundColor="#F5F5DC">
+        <Label Text="Gra w kości. Autor 000000000" FontSize="Large" TextColor="White"
+               BackgroundColor="#A52A2A" HorizontalOptions="Fill" />
+        <Button Text="RZUĆ KOŚĆMI" BackgroundColor="#D2691E" TextColor="White"
+                HorizontalOptions="Center" Margin="0,10" Clicked="OnRollClicked" />
+        <HorizontalStackLayout BackgroundColor="White" HorizontalOptions="Fill">
+            <Image x:Name="Dice1" Source="question.jpg" HeightRequest="60" WidthRequest="60" Margin="9" />
+            <Image x:Name="Dice2" Source="question.jpg" HeightRequest="60" WidthRequest="60" Margin="9" />
+            <Image x:Name="Dice3" Source="question.jpg" HeightRequest="60" WidthRequest="60" Margin="9" />
+            <Image x:Name="Dice4" Source="question.jpg" HeightRequest="60" WidthRequest="60" Margin="9" />
+            <Image x:Name="Dice5" Source="question.jpg" HeightRequest="60" WidthRequest="60" Margin="9" />
+        </HorizontalStackLayout>
+        <Label x:Name="RollScoreLabel" Text="Wynik tego losowania: 0" HorizontalOptions="Center" Margin="0,10" />
+        <Label x:Name="GameScoreLabel" Text="Wynik gry: 0" HorizontalOptions="Center" Margin="0,10" />
+        <Button Text="RESETUJ WYNIK" BackgroundColor="#D2691E" TextColor="White"
+                HorizontalOptions="Center" Margin="0,10" Clicked="OnResetClicked" />
+    </VerticalStackLayout>
+</ContentPage>

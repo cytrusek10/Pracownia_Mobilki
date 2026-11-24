@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CaesarMobile.MainPage"
+             Title="Szyfrowanie. Wykonane przez 00000000000"
+             BackgroundColor="#5F9EA0">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="15" Spacing="10">
+
+            <Label Text="Podaj wartość klucza" TextColor="#FAEBD7" FontSize="18" />
+            <Entry x:Name="KeyEntry" Keyboard="Numeric" BackgroundColor="White" TextColor="Black" WidthRequest="120" HorizontalOptions="Start" />
+
+            <Label Text="Podaj tekst" TextColor="#FAEBD7" FontSize="18" />
+            <Editor x:Name="PlainTextEditor" HeightRequest="120" AutoSize="Disabled"
+                    BackgroundColor="White" TextColor="Black" />
+
+            <Button Text="Zaszyfruj" Clicked="OnEncryptClicked"
+                    BackgroundColor="#ADD8E6" TextColor="Black" HorizontalOptions="Center" />
+
+            <Label Text="Tekst zaszyfrowany" TextColor="#FAEBD7" FontSize="18" />
+            <Border Stroke="#FAEBD7" StrokeThickness="3" Padding="10" HeightRequest="120">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="20" />
+                </Border.StrokeShape>
+                <Label x:Name="EncryptedTextLabel" TextColor="#F0F8FF" />
+            </Border>
+
+            <Button Text="Zapisz szyfr w pliku" Clicked="OnSaveClicked"
+                    BackgroundColor="#ADD8E6" TextColor="Black" HorizontalOptions="Fill" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
